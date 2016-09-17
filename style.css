@@ -1,0 +1,113 @@
+.slider{
+	width: 40%;
+	margin:0 auto;
+	max-height: 400px;
+	height: 250px;
+	padding: 4px;
+	border:1px solid #eee;
+	overflow: hidden;
+}
+
+.slider img{
+	display: none;
+	max-width: 100%;
+	width: 100%;
+	margin: 0 auto;
+	max-height: 400px;
+	height: 250px;
+	opacity: 0;
+	transition:.5s;
+	position: relative;
+}
+
+.slider .active img{
+	display: block;
+	opacity:1;
+	transition:.5s;
+}
+
+section{
+position: relative;
+-webkit-user-select: none;
+}
+
+section button{
+    position: absolute;
+    background-color: hsla(0, 8%, 69%, 0.01);
+    width: 3em;
+    border-radius: 50%;
+    border: none;
+    height: 3em;
+    text-align: center;
+    color: #fff;
+}
+
+/*section button:hover{
+    background-color: hsla(0, 2%, 40%, 0.54);
+    /*font-size: 12px;*/
+    /*font-weight: 500;*/
+/*}*/
+
+.base-btn{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	display: block;
+    -webkit-user-select: none;
+
+}
+
+.base-btn span{
+    width: 33%;
+    display: inline-block;
+    height: 100%;
+    font-size: 5em;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0.25;
+    text-align: center;
+    position: absolute;
+    line-height: 100%;
+    padding-top: 100px;
+    transition:.2s;
+    cursor: pointer;
+    -webkit-user-select: none;
+
+}
+
+.base-btn span:hover{
+	opacity: .8;
+}
+
+.next {
+
+    right:0;
+    top:
+}
+
+.prev {
+	 left:0;
+}
+
+.load{
+	display: inline-block;
+	opacity: 1;
+	width: 10%;
+	height: 3px;
+	background-color: black;
+	transition:1.5s;
+}
+
+.load-step{
+
+width: 100%;
+background-color: red;
+opacity: 1;
+
+}
