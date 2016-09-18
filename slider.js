@@ -25,7 +25,7 @@ function alijkh_slider_set(_element)
 	_element.setAttribute('data-num', 0);
 	var ul_nav = document.createElement("div");
 	ul_nav.className= 'base-btn';
-
+	// console.log(_element);
 	var prev_nav = document.createElement("span");
 	prev_nav.addEventListener('click', function(){
 		alijkh_slider_prev.call(this.parentElement.parentElement);
@@ -53,8 +53,8 @@ function alijkh_slider_set(_element)
 	next_nav.appendChild(next_text);
 
 	// console.log(_element);
-	_element.addEventListener('mouseover', mouse_in);
-	_element.addEventListener('mouseout', mouse_out);
+		// _element.addEventListener('mouseover');
+		// _element.addEventListener('mouseout');
 
 
 	// var puse_nav = document.createElement("button");
@@ -74,16 +74,20 @@ function alijkh_slider_set(_element)
 function alijkh_slider_next()
 {
 
-
+	console.log(this);
 	var slider = this;
-	// console.log(this);
+
+	// var slider = _element.parentElement.parentElement;
+
+
+	// var slider = this;
+
 	var current_num = slider.getAttribute('data-num');
 	var current_active = slider.getElementsByClassName('active')[0];
-	var get_li = current_active.getElementsByTagName("div")[0];
-	console.log(get_li);
+	// var get_li = current_active.getElementsByTagName("div")[0];
+	// console.log(get_li);
 	// console.log(current_num);
 	current_active.className = '';
-	get_li.className = 'load';
 
 	var ul_images = slider.getElementsByTagName('ul')[0];
 
@@ -97,9 +101,9 @@ function alijkh_slider_next()
 	}
 
 
-	var get_li = current_active.getElementsByTagName("div")[0];
-	console.log(get_li);
-	get_li.className += " load-step";
+	// var get_li = current_active.getElementsByTagName("div")[0];
+	// console.log(get_li);
+	// get_li.className += " load-step";
 
 	var ul_images = slider.getElementsByTagName('ul')[0];
 	var new_active_tag = ul_images.getElementsByTagName('li')[new_active_num];
@@ -116,9 +120,8 @@ function alijkh_slider_prev()
 {
 
 	 // console.log(this);
-	// var slider = this.parentElement.parentElement;
-	// var slider = this.parentElement.parentElement;
 	var slider = this;
+	// var slider = this;
 	var current_num = slider.getAttribute('data-num');
 	var ul_images = slider.getElementsByTagName('ul')[0];
 
@@ -147,9 +150,9 @@ function alijkh_slider_prev()
 }
 
 function mouse_in (_element)
-{
+{/*
 	 clearInterval(atSlider);
-	 console.log("mouse_in()");
+	 console.log("mouse_in()");*/
 	 // console.log(this.atSlider);
 }
 
@@ -158,9 +161,9 @@ function mouse_out (_element)
 	// _element.atSlider = setInterval(alijkh_slider_next.bind(this), 1500);
 	 // setInterval(alijkh_slider_next(),1500);
 	 // setInterval(this.atSlider.bind(_element), 1500);
-	atSlider = setInterval(alijkh_slider_next.bind(this), 1500);
 	 // console.log("mouse_out()");
-	 console.log(this);
+/*	 console.log(this);
+	atSlider = setInterval(alijkh_slider_next.bind(this), 1500);*/
 	 // clearInterval(this.atSlider);
 }
 alijkh_slider(document.getElementsByClassName('slider'));
